@@ -1,13 +1,13 @@
 import open3d as o3d
-import pytest
+import numpy as np
 
 def test_identically_colored_connected_components():
     mesh = o3d.geometry.TriangleMesh()
-    mesh.vertices = o3d.utility.vector3dvector(
+    mesh.vertices = o3d.utility.Vector3dVector(
         np.array([
         [0, 1, 0], [0, 2, 0],
         [1, 0, 0], [1, 1.5, 0], [1, 3, 0],
-        [2, 1, 0],[2, 2, 0]
+        [2, 1, 0], [2, 2, 0]
         ]))
     mesh.triangles = o3d.utility.Vector3iVector(
         np.array([

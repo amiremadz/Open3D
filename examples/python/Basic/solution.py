@@ -6,6 +6,7 @@ if __name__ == "__main__":
     connected_components = mesh.identically_colored_connected_components()
     ofile = open("/home/amirok/Documents/Open3D/results_python.txt", "w")
     for row in connected_components:
-        ofile.write(str(row).replace("[", "").replace("]", ""))
+        print(list(row))
+        ofile.write(str(row).replace("IntVector", "").replace("[", "").replace("]", ""))
         ofile.write("\n")
     ofile.close()
