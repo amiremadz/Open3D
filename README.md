@@ -2,35 +2,33 @@
 <img src="https://raw.githubusercontent.com/intel-isl/Open3D/master/docs/_static/open3d_logo_horizontal.png" width="320" />
 </p>
 
-# Intel Assignement
+# Intel ISL Assignement
 
-* Add C++ method open3d::geometry::TriangleMesh::IdenticallyColoredConnectedComponents
+* Add C++ method open3d::geometry::TriangleMesh::IdenticallyColoredConnectedComponent.
+    * Added <strong>TriangleMesh.IdenticallyColoredConnectedComponents()</strong> in [TriangleMesh.cpp](https://github.com/amiremadz/Open3D/blob/master/cpp/tests/geometry/TriangleMesh.cpp)
 
 * Write the Python binding for
-open3d.geometry.TriangleMesh.identically_colored_connected_components
+open3d.geometry.TriangleMesh.identically_colored_connected_components.
+    * Updated [trianglemesh.cpp](https://github.com/amiremadz/Open3D/blob/master/cpp/pybind/geometry/trianglemesh.cpp)
 
 * Write a "Open3D/examples/Cpp/solution.cpp" file to read the input mesh
 "test_mesh.ply", find identically-colored connected components. Change the
 build system so that an executable can be build.
+    * Updated [CMakeLists.txt](https://github.com/amiremadz/Open3D/blob/master/examples/cpp/CMakeLists.txt)
+    * Run: <strong>build/bin/examples/solution</strong>
 
 * Write a "Open3D/examples/Python/Basic/solution.py" file to read the input
 mesh "test_mesh.ply", find identically-colored connected components.
+    * Run: python [solution](https://github.com/amiremadz/Open3D/blob/master/examples/python/Basic/solution.py)
 
 * Output the result of task 3 or 4 to "results.txt", where the results shall be formatted the same way as specified in
 the "Example triangle mesh" section.
+    * C++: [results_cpp.txt](https://github.com/amiremadz/Open3D/blob/master/results_cpp.txt)
+    * Python: [results_python.txt](https://github.com/amiremadz/Open3D/blob/master/results_python.txt)
 
 * Write C++ and Python unit tests integrated with Open3D's unit test system.
-test_triabglemesh.py(https://github.com/amiremadz/Open3D/python/test/test_trianglemesh.py)
-
-TriangleMesh.IdenticallyColoredConnectedComponents() in TriangleMesh.cpp(https://github.com/amiremadz/Open3D/cpp/tests/geometry/TriangleMesh.cpp)
-
-* Run: 
-** C++: build/bin/examples/solution
-** Python: python Open3D/examples/python/Basic/solution.py
-
-* Test: 
-** C++: build/bin/tests --gtest_filter=TriangleMesh.IdenticallyColoredConnectedComponents 
-** Python: pytest test_triabglemesh.py(https://github.com/amiremadz/Open3D/python/test/test_trianglemesh.py)
+    * C++: <strong>build/bin/tests --gtest_filter=TriangleMesh.IdenticallyColoredConnectedComponents</strong>
+    * Python: pytest [test_trianglemesh.py](https://github.com/amiremadz/Open3D/blob/master/python/test/test_trianglemesh.py)
 
 # Open3D: A Modern Library for 3D Data Processing
 
